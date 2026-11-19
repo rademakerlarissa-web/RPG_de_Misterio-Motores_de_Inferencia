@@ -1,7 +1,9 @@
 # O Mistério da Gata Estrela — Trabalho Final: Motores de Inferência
 
 Trabalho final de **Lógica para Computação** (Profa. Wilcilene Kowal, IFC São Bento do Sul), **Contexto 2: a linha do tempo do museu — quem levou a Estrela?**
+
 Estudantes: **Larissa Gabriel** e **Isabel Shiffler**.
+
 Enunciado: https://wilcilene.github.io/estudos/disciplinas/logica-para-computacao/2027/trabalho-final.html
 
 O projeto tem três partes que usam o mesmo motor de inferência: um **motor em Python** (SLD + SAT/DPLL + CLI + testes),
