@@ -1,0 +1,70 @@
+{
+ "corredores": [
+  [
+   "Saguão",
+   "Galeria Sul",
+   2
+  ],
+  [
+   "Saguão",
+   "Café",
+   3
+  ],
+  [
+   "Galeria Sul",
+   "Reserva Técnica",
+   4
+  ],
+  [
+   "Café",
+   "Reserva Técnica",
+   6
+  ]
+ ],
+ "local_do_crime": "Saguão",
+ "janela": [
+  14,
+  30
+ ],
+ "registros": [
+  [
+   "Seu Barros",
+   "Café",
+   5
+  ],
+  [
+   "Seu Barros",
+   "Galeria Sul",
+   20
+  ],
+  [
+   "Seu Barros",
+   "Café",
+   40
+  ],
+  [
+   "Dona Íris",
+   "Reserva Técnica",
+   10
+  ],
+  [
+   "Dona Íris",
+   "Reserva Técnica",
+   35
+  ]
+ ],
+ "depoimentos": [
+  [
+   "Seu Barros",
+   "Café",
+   5,
+   40
+  ],
+  [
+   "Dona Íris",
+   "Reserva Técnica",
+   10,
+   35
+  ]
+ ]
+}

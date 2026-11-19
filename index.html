@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>O Mistério da Gata Estrela</title>
+<meta name="description" content="Um jogo de investigação no museu e o painel Lógica em Ação: motores de inferência explicados passo a passo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500&family=JetBrains+Mono:wght@400;600&family=Nunito:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/game.css">
+<link rel="stylesheet" href="css/panel.css">
+<link rel="stylesheet" href="css/docs.css">
+<link rel="stylesheet" href="css/lab.css">
+<link rel="stylesheet" href="css/intro.css">
+</head>
+<body>
+<a class="pular" href="#jogar">Ir para o jogo</a>
+
+<header class="topo">
+  <div class="miolo topo-linha">
+    <a class="marca" href="#inicio" aria-label="O Mistério da Gata Estrela, início">
+      <svg viewBox="0 0 24 24" fill="#D7A45B" aria-hidden="true"><path d="M12 1.500l2.700 6.700 7.100.6-5.400 4.700 1.700 7-6.100-3.800-6.100 3.800 1.700-7L2.200 8.800l7.100-.6z"/></svg>
+      <span>Gata Estrela</span>
+    </a>
+    <nav class="menu" aria-label="Principal">
+      <a href="#inicio">Início</a>
+      <a href="#jogar">Jogar</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#fundamentos">Fundamentos lógicos</a>
+      <a href="#laboratorio">Laboratório</a>
+      <a href="#sobre">Sobre o projeto</a>
+    </nav>
+    <div class="topo-acoes">
+      <button class="alterna" id="alterna-anim" type="button" aria-pressed="false"><span class="chave" aria-hidden="true"></span><span class="rotulo">Reduzir animações</span><span class="so-leitor">Reduzir animações</span></button>
+    </div>
+    <button class="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="inicio" aria-labelledby="titulo">
+    <div class="miolo hero-grade">
+      <div>
+        <p class="faixa">Explore • Interrogue • Deduza</p>
+        <h1 id="titulo">O Mistério da Gata Estrela</h1>
+        <p class="lede">Uma noite no museu, uma gata que sumiu e quatro pessoas com histórias para contar.</p>
+        <p class="texto">Percorra as salas, converse com quem estava lá e confira o que cada um diz. Ao lado do jogo, o painel <b>Lógica em Ação</b> mostra a lógica por trás de cada passo, em linguagem simples ou técnica.</p>
+        <div class="hero-acoes">
+          <a class="botao" id="btn-iniciar" href="#jogar">Começar investigação</a>
+          <a class="botao secundario" href="#como-funciona">Como funciona</a>
+        </div>
+      </div>
+      <div class="hero-arte" id="hero-arte"></div>
+    </div>
+  </section>
+
+  <section class="secao" id="introducao" aria-labelledby="h-intro" hidden>
+    <div class="miolo">
+      <div class="secao-cab">
+        <div class="ornamento"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1.500l2.700 6.700 7.100.6-5.400 4.700 1.700 7-6.100-3.800-6.100 3.800 1.700-7L2.200 8.800l7.100-.6z"/></svg></div>
+        <h2 id="h-intro">Antes de investigar</h2>
+        <p>Para acompanhar o painel Lógica em Ação, ajuda conhecer as ideias por trás dele. São seis lições curtas, e em cada uma você testa a ideia com o mesmo motor que resolve o caso. Quando terminar, o jogo aparece.</p>
+      </div>
+      <div id="intro-raiz"></div>
+    </div>
+  </section>
+
+  <section class="secao" id="jogar" aria-labelledby="h-jogar" style="padding-top:12px">
+    <div class="miolo">
+      <div class="secao-cab">
+        <div class="ornamento"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1.500l2.700 6.700 7.100.6-5.400 4.700 1.700 7-6.100-3.800-6.100 3.800 1.700-7L2.200 8.800l7.100-.6z"/></svg></div>
+        <h2 id="h-jogar">Jogar</h2>
+        <p>À esquerda, o museu. À direita, a lógica que o sustenta. Cada passo da investigação chega ao painel com resultados calculados pelo motor de inferência.</p>
+      </div>
+      <div class="jogo" id="jogo" data-vista="jogo">
+        <div class="abas-vista noite" role="tablist" aria-label="Alternar entre o jogo e o painel">
+          <button type="button" role="tab" data-vista="jogo" aria-selected="true">Jogo</button>
+          <button type="button" role="tab" data-vista="logica" aria-selected="false">Lógica em Ação<span class="ponto-novo" hidden></span></button>
+        </div>
+        <div class="jogo-grade">
+          <div class="col-jogo" id="palco-raiz"></div>
+          <div class="col-logica"><aside class="painel papel" id="painel-raiz" aria-label="Lógica em Ação"></aside></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" id="como-funciona" aria-labelledby="h-como">
+    <div class="miolo">
+      <div class="secao-cab">
+        <div class="ornamento"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1.500l2.700 6.700 7.100.6-5.400 4.700 1.700 7-6.100-3.800-6.100 3.800 1.700-7L2.200 8.800l7.100-.6z"/></svg></div>
+        <h2 id="h-como">Como funciona</h2>
+        <p>De um registro no livro até a conclusão final, o sistema segue sempre o mesmo caminho. Clique em cada etapa.</p>
+      </div>
+      <div id="fluxo-raiz"></div>
+    </div>
+  </section>
+
+  <section class="secao" id="fundamentos" aria-labelledby="h-fund">
+    <div class="miolo">
+      <div class="secao-cab">
+        <div class="ornamento"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1.500l2.700 6.700 7.100.6-5.400 4.700 1.700 7-6.100-3.800-6.100 3.800 1.700-7L2.200 8.800l7.100-.6z"/></svg></div>
+        <h2 id="h-fund">Fundamentos lógicos</h2>
+        <p>Os seis módulos do trabalho, como capítulos. Cada um diz o que é, como foi feito e traz uma demonstração que executa o motor de verdade. O que não pôde ser executado aparece marcado como tal.</p>
+      </div>
+      <div id="modulos-raiz"></div>
+    </div>
+  </section>
+
+  <section class="secao" id="laboratorio" aria-labelledby="h-lab">
+    <div class="miolo">
+      <div class="secao-cab">
+        <div class="ornamento"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1.500l2.700 6.700 7.100.6-5.400 4.700 1.700 7-6.100-3.800-6.100 3.800 1.700-7L2.200 8.800l7.100-.6z"/></svg></div>
+        <h2 id="h-lab">Laboratório de Inferência</h2>
+        <p>Analise o caso do jogo: mapa, linha do tempo, fatos e perguntas ao motor, sempre com a justificativa.</p>
+      </div>
+      <div id="lab-raiz"></div>
+    </div>
+  </section>
+
+  <section class="secao" id="sobre" aria-labelledby="h-sobre">
+    <div class="miolo">
+      <div class="secao-cab">
+        <div class="ornamento"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1.500l2.700 6.700 7.100.6-5.400 4.700 1.700 7-6.100-3.800-6.100 3.800 1.700-7L2.200 8.800l7.100-.6z"/></svg></div>
+        <h2 id="h-sobre">Sobre o projeto</h2>
+        <p>Trabalho final de Lógica para Computação, Contexto 2: a linha do tempo do museu. Estudantes responsáveis: Larissa Gabriel e Isabel Shiffler.</p>
+      </div>
+      <div id="sobre-raiz"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="miolo rodape-grade">
+    <div>
+      <h4>O Mistério da Gata Estrela</h4>
+      <p>Lógica para Computação, Profa. Wilcilene Kowal, IFC São Bento do Sul. Estudantes responsáveis: Larissa Gabriel e Isabel Shiffler. Personagens, cenários e a gata Estrela são imagens autorais do projeto, geradas com apoio de IA.</p>
+    </div>
+    <div>
+      <h4>Navegar</h4>
+      <ul><li><a href="#jogar">Jogar</a></li><li><a href="#fundamentos">Fundamentos lógicos</a></li><li><a href="#laboratorio">Laboratório</a></li></ul>
+    </div>
+    <div>
+      <h4>Estado desta versão</h4>
+      <p>Versão completa. O motor SLD, o DPLL, a linha de comando e os testes estão implementados (Python canônico e port em JavaScript no site). O que não foi executado, como a conferência com o SWI-Prolog, está dito em “Sobre o projeto”.</p>
+    </div>
+  </div>
+</footer>
+
+<dialog class="diario" id="diario" aria-label="Diário do detetive">
+  <div class="diario-caixa">
+    <button class="diario-fechar" type="button" aria-label="Fechar diário">×</button>
+    <div class="livro" data-modo="duas">
+      <img class="livro-fundo" alt="" draggable="false">
+      <div class="folha folha-e"></div><div class="folha folha-d"></div>
+    </div>
+    <div class="diario-nav">
+      <button class="botao diario-ant" type="button" aria-label="Página anterior">◀</button>
+      <span class="diario-cont" aria-live="polite"></span>
+      <button class="botao diario-prox" type="button" aria-label="Próxima página">▶</button>
+    </div>
+  </div>
+</dialog>
+
+<dialog class="final" id="final" aria-labelledby="final-titulo">
+  <div class="final-caixa">
+    <h2 id="final-titulo">Caso encerrado</h2>
+    <div class="final-fotos">
+      <figure><img id="final-img1" alt=""><figcaption>A Estrela voltou do passeio e pulou nos braços de Dona Helena.</figcaption></figure>
+      <figure><img id="final-img2" alt=""><figcaption>Detetive Moraes: missão cumprida.</figcaption></figure>
+    </div>
+    <div class="final-texto">
+      <p><b>O que aconteceu.</b> O Seu Barros foi à galeria às 21h20 e abriu uma janela para arejar. A Estrela saiu para um passeio, demorou a voltar e deu o susto de todo mundo. Ele escondeu a ida à galeria por vergonha, mas a câmera registrou tudo.</p>
+      <p class="final-nota"><b>Onde entra a lógica.</b> O depoimento do guarda ser refutado pelo registro da câmera é uma conclusão que o motor de inferência prova (veja a árvore de prova no painel Lógica em Ação). A explicação do passeio da gata é parte da história: nenhum motor calculou isso.</p>
+      <div class="final-acoes">
+        <button class="botao" type="button" id="final-diario">Rever o diário</button>
+        <button class="botao secundario" type="button" id="final-denovo">Jogar de novo</button>
+        <button class="botao secundario" type="button" id="final-fechar">Fechar</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<script src="data/manifest.js"></script>
+<script src="data/casos.js"></script>
+<script src="data/painel-textos.js"></script>
+<script src="data/modulos.js"></script>
+<script src="js/core/util.js"></script>
+<script src="js/core/visuais.js"></script>
+<script src="js/motor/termos.js"></script>
+<script src="js/motor/sld.js"></script>
+<script src="js/motor/regras.js"></script>
+<script src="js/motor/base.js"></script>
+<script src="js/motor/sat.js"></script>
+<script src="js/motor/consultas.js"></script>
+<script src="data/testes.js"></script>
+<script src="data/saidas-cli.js"></script>
+<script src="js/engine/adaptador.js"></script>
+<script src="js/panel/painel.js"></script>
+<script src="js/game/palco.js"></script>
+<script src="js/intro/intro.js"></script>
+<script src="js/docs/docs.js"></script>
+<script src="js/lab/lab.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

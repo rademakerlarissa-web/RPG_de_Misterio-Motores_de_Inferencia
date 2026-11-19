@@ -1,0 +1,606 @@
+{
+ "versao": 1,
+ "descricao": "Manifesto de assets de O Mistério da Gata Estrela. Gerado por tools/build_assets.py.",
+ "convencoes": {
+  "sprites_ordem": "frente, passo, esquerda, direita, costas (arquivos 01..05 do LEIA-ME)",
+  "ancora_sprite": "base-centro (x=0.5, y=1.0): os pés ficam no ponto de posicionamento",
+  "dimensoes": "Cada imagem tem tamanho próprio; o palco deve ler w/h daqui e nunca assumir um tamanho único."
+ },
+ "personagens": [
+  {
+   "id": "moraes",
+   "nome": "Detetive Moraes",
+   "papel": "Protagonista",
+   "cor": "#C98F4B",
+   "retratos": [
+    {
+     "id": "serio",
+     "rotulo": "Sério",
+     "arquivo": "assets/img/personagens/moraes/retrato-serio.webp",
+     "w": 493,
+     "h": 854
+    },
+    {
+     "id": "surpreso",
+     "rotulo": "Surpreso",
+     "arquivo": "assets/img/personagens/moraes/retrato-surpreso.webp",
+     "w": 573,
+     "h": 851
+    },
+    {
+     "id": "pensando",
+     "rotulo": "Pensando",
+     "arquivo": "assets/img/personagens/moraes/retrato-pensando.webp",
+     "w": 523,
+     "h": 851
+    }
+   ],
+   "sprites": {
+    "frente": {
+     "arquivo": "assets/img/personagens/moraes/sprite-frente.webp",
+     "w": 261,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    },
+    "passo": {
+     "arquivo": "assets/img/personagens/moraes/sprite-passo.webp",
+     "w": 259,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    },
+    "esquerda": {
+     "arquivo": "assets/img/personagens/moraes/sprite-esquerda.webp",
+     "w": 268,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    },
+    "direita": {
+     "arquivo": "assets/img/personagens/moraes/sprite-direita.webp",
+     "w": 267,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    },
+    "costas": {
+     "arquivo": "assets/img/personagens/moraes/sprite-costas.webp",
+     "w": 262,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "helena",
+   "nome": "Dona Helena",
+   "papel": "Diretora do museu",
+   "cor": "#8E5A7A",
+   "retratos": [
+    {
+     "id": "chorando",
+     "rotulo": "Chorando",
+     "arquivo": "assets/img/personagens/helena/retrato-chorando.webp",
+     "w": 465,
+     "h": 844
+    },
+    {
+     "id": "triste",
+     "rotulo": "Triste",
+     "arquivo": "assets/img/personagens/helena/retrato-triste.webp",
+     "w": 517,
+     "h": 858
+    },
+    {
+     "id": "aflita",
+     "rotulo": "Aflita",
+     "arquivo": "assets/img/personagens/helena/retrato-aflita.webp",
+     "w": 536,
+     "h": 858
+    }
+   ],
+   "sprites": {
+    "frente": {
+     "arquivo": "assets/img/personagens/helena/sprite-frente.webp",
+     "w": 193,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    },
+    "passo": {
+     "arquivo": "assets/img/personagens/helena/sprite-passo.webp",
+     "w": 233,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    },
+    "esquerda": {
+     "arquivo": "assets/img/personagens/helena/sprite-esquerda.webp",
+     "w": 274,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    },
+    "direita": {
+     "arquivo": "assets/img/personagens/helena/sprite-direita.webp",
+     "w": 270,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    },
+    "costas": {
+     "arquivo": "assets/img/personagens/helena/sprite-costas.webp",
+     "w": 212,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "iris",
+   "nome": "Dra. Íris",
+   "papel": "Curadora",
+   "cor": "#9C4A63",
+   "retratos": [
+    {
+     "id": "sorrindo",
+     "rotulo": "Sorrindo",
+     "arquivo": "assets/img/personagens/iris/retrato-sorrindo.webp",
+     "w": 488,
+     "h": 857
+    },
+    {
+     "id": "surpresa",
+     "rotulo": "Surpresa",
+     "arquivo": "assets/img/personagens/iris/retrato-surpresa.webp",
+     "w": 509,
+     "h": 859
+    },
+    {
+     "id": "ideia",
+     "rotulo": "Ideia",
+     "arquivo": "assets/img/personagens/iris/retrato-ideia.webp",
+     "w": 513,
+     "h": 855
+    }
+   ],
+   "sprites": {
+    "frente": {
+     "arquivo": "assets/img/personagens/iris/sprite-frente.webp",
+     "w": 208,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    },
+    "passo": {
+     "arquivo": "assets/img/personagens/iris/sprite-passo.webp",
+     "w": 212,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    },
+    "esquerda": {
+     "arquivo": "assets/img/personagens/iris/sprite-esquerda.webp",
+     "w": 240,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    },
+    "direita": {
+     "arquivo": "assets/img/personagens/iris/sprite-direita.webp",
+     "w": 243,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    },
+    "costas": {
+     "arquivo": "assets/img/personagens/iris/sprite-costas.webp",
+     "w": 207,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "barros",
+   "nome": "Seu Barros",
+   "papel": "Guarda",
+   "cor": "#5B4A7A",
+   "retratos": [
+    {
+     "id": "cruzado",
+     "rotulo": "Braços cruzados",
+     "arquivo": "assets/img/personagens/barros/retrato-cruzado.webp",
+     "w": 589,
+     "h": 859
+    },
+    {
+     "id": "serio",
+     "rotulo": "Sério",
+     "arquivo": "assets/img/personagens/barros/retrato-serio.webp",
+     "w": 606,
+     "h": 859
+    },
+    {
+     "id": "assustado",
+     "rotulo": "Assustado",
+     "arquivo": "assets/img/personagens/barros/retrato-assustado.webp",
+     "w": 592,
+     "h": 859
+    },
+    {
+     "id": "nervoso",
+     "rotulo": "Nervoso (boné abaixado)",
+     "arquivo": "assets/img/personagens/barros/retrato-nervoso.webp",
+     "w": 779,
+     "h": 900
+    }
+   ],
+   "sprites": {
+    "frente": {
+     "arquivo": "assets/img/personagens/barros/sprite-frente.webp",
+     "w": 219,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    },
+    "passo": {
+     "arquivo": "assets/img/personagens/barros/sprite-passo.webp",
+     "w": 230,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    },
+    "esquerda": {
+     "arquivo": "assets/img/personagens/barros/sprite-esquerda.webp",
+     "w": 256,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    },
+    "direita": {
+     "arquivo": "assets/img/personagens/barros/sprite-direita.webp",
+     "w": 257,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    },
+    "costas": {
+     "arquivo": "assets/img/personagens/barros/sprite-costas.webp",
+     "w": 208,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "tiao",
+   "nome": "Tião",
+   "papel": "Faxineiro",
+   "cor": "#7A4F7E",
+   "retratos": [
+    {
+     "id": "pensando",
+     "rotulo": "Pensando",
+     "arquivo": "assets/img/personagens/tiao/retrato-pensando.webp",
+     "w": 436,
+     "h": 860
+    },
+    {
+     "id": "sorrindo",
+     "rotulo": "Sorrindo",
+     "arquivo": "assets/img/personagens/tiao/retrato-sorrindo.webp",
+     "w": 506,
+     "h": 858
+    },
+    {
+     "id": "calma",
+     "rotulo": "Pedindo calma",
+     "arquivo": "assets/img/personagens/tiao/retrato-calma.webp",
+     "w": 570,
+     "h": 857
+    }
+   ],
+   "sprites": {
+    "frente": {
+     "arquivo": "assets/img/personagens/tiao/sprite-frente.webp",
+     "w": 163,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    },
+    "passo": {
+     "arquivo": "assets/img/personagens/tiao/sprite-passo.webp",
+     "w": 205,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    },
+    "esquerda": {
+     "arquivo": "assets/img/personagens/tiao/sprite-esquerda.webp",
+     "w": 238,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    },
+    "direita": {
+     "arquivo": "assets/img/personagens/tiao/sprite-direita.webp",
+     "w": 239,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    },
+    "costas": {
+     "arquivo": "assets/img/personagens/tiao/sprite-costas.webp",
+     "w": 201,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "luiza",
+   "nome": "Luiza",
+   "papel": "Visitante",
+   "cor": "#B5495B",
+   "retratos": [
+    {
+     "id": "sorrindo",
+     "rotulo": "Sorrindo",
+     "arquivo": "assets/img/personagens/luiza/retrato-sorrindo.webp",
+     "w": 525,
+     "h": 845
+    },
+    {
+     "id": "pensativa",
+     "rotulo": "Pensativa",
+     "arquivo": "assets/img/personagens/luiza/retrato-pensativa.webp",
+     "w": 539,
+     "h": 845
+    },
+    {
+     "id": "surpresa",
+     "rotulo": "Surpresa",
+     "arquivo": "assets/img/personagens/luiza/retrato-surpresa.webp",
+     "w": 546,
+     "h": 848
+    }
+   ],
+   "sprites": {
+    "frente": {
+     "arquivo": "assets/img/personagens/luiza/sprite-frente.webp",
+     "w": 210,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    },
+    "passo": {
+     "arquivo": "assets/img/personagens/luiza/sprite-passo.webp",
+     "w": 222,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    },
+    "esquerda": {
+     "arquivo": "assets/img/personagens/luiza/sprite-esquerda.webp",
+     "w": 252,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    },
+    "direita": {
+     "arquivo": "assets/img/personagens/luiza/sprite-direita.webp",
+     "w": 250,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    },
+    "costas": {
+     "arquivo": "assets/img/personagens/luiza/sprite-costas.webp",
+     "w": 225,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "estrela",
+   "nome": "Estrela",
+   "papel": "Gata desaparecida",
+   "cor": "#D7A45B",
+   "retratos": [],
+   "sprites": {
+    "sentada": {
+     "arquivo": "assets/img/gata/estrela-sentada.webp",
+     "w": 422,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    },
+    "andando": {
+     "arquivo": "assets/img/gata/estrela-andando.webp",
+     "w": 593,
+     "h": 480,
+     "ancora": {
+      "x": 0.5,
+      "y": 1.0
+     }
+    }
+   },
+   "nota": "A pasta Estrela/ citada no LEIA-ME não veio no zip. Só existem 2 poses (sentada e andando), recortadas aqui a partir de imagens soltas."
+  }
+ ],
+ "cenarios": [
+  {
+   "id": "escritorio",
+   "nome": "Escritório do Detetive",
+   "uso": "Capítulo 1 (o chamado)",
+   "arquivo": "assets/img/cenarios/escritorio.webp",
+   "w": 1600,
+   "h": 900,
+   "origem": "Escrit?rio do Detetive ? Luz da Lua (1).png"
+  },
+  {
+   "id": "hall",
+   "nome": "Hall principal",
+   "uso": "Capítulo 2 (o museu) e conclusão",
+   "arquivo": "assets/img/cenarios/hall.webp",
+   "w": 1600,
+   "h": 900,
+   "origem": "Sal?o do Museu sob a Lua.png"
+  },
+  {
+   "id": "galeria",
+   "nome": "Galeria de Arte",
+   "uso": "Registro das 21h20 (Barros)",
+   "arquivo": "assets/img/cenarios/galeria.webp",
+   "w": 1600,
+   "h": 900,
+   "origem": "Galeria de Arte Dourada.png"
+  },
+  {
+   "id": "mapa",
+   "nome": "Planta do museu (pixel art)",
+   "uso": "Mapa / grafo de salas",
+   "arquivo": "assets/img/cenarios/mapa.webp",
+   "w": 1536,
+   "h": 1024,
+   "origem": "Mapa Pixel Art de Museu e Mist?rios.png"
+  },
+  {
+   "id": "cafe",
+   "nome": "Café do Museu",
+   "uso": "Depoimentos de Barros e Luiza",
+   "arquivo": "assets/img/cenarios/cafe.webp",
+   "w": 1600,
+   "h": 900,
+   "origem": "a0c8a13d-image.png"
+  },
+  {
+   "id": "reserva",
+   "nome": "Reserva técnica",
+   "uso": "Registros da curadora e do faxineiro",
+   "arquivo": "assets/img/cenarios/reserva.webp",
+   "w": 1600,
+   "h": 900,
+   "origem": "46ae4718-image.png"
+  }
+ ],
+ "faltando": [
+  {
+   "id": "livro-de-registros",
+   "tipo": "objeto",
+   "nome": "Livro de registros",
+   "nota": "Evento 1 do painel (primeiro registro)."
+  },
+  {
+   "id": "almofada",
+   "tipo": "objeto",
+   "nome": "Almofada do pedestal",
+   "nota": "Já existe no cenário do hall; só precisa de área clicável."
+  }
+ ],
+ "objetos": {
+  "diario-aberto": {
+   "nome": "Diário aberto",
+   "arquivo": "assets/img/objetos/diario-aberto.webp",
+   "w": 1400,
+   "h": 933
+  },
+  "diario-fechado": {
+   "nome": "Diário fechado",
+   "arquivo": "assets/img/objetos/diario-fechado.webp",
+   "w": 356,
+   "h": 420
+  },
+  "camera": {
+   "nome": "Câmera de segurança",
+   "arquivo": "assets/img/objetos/camera.webp",
+   "w": 415,
+   "h": 420
+  }
+ },
+ "finais": {
+  "helena-estrela": {
+   "nome": "Dona Helena abraçada com a Estrela",
+   "arquivo": "assets/img/final/helena-estrela.webp",
+   "w": 720,
+   "h": 1080
+  },
+  "moraes-joinha": {
+   "nome": "Detetive Moraes de joinha",
+   "arquivo": "assets/img/final/moraes-joinha.webp",
+   "w": 720,
+   "h": 1080
+  }
+ }
+}

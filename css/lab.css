@@ -1,0 +1,69 @@
+/* ==========================================================================
+   lab.css — Laboratório de Inferência (interface)
+   ========================================================================== */
+
+.lab-grade { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(16px, 2vw, 26px); align-items: start; }
+.lab-col { display: grid; gap: 18px; min-width: 0; }
+.lab-card { background: linear-gradient(180deg, #F7EBD3, #EEDAB3); color: var(--tinta); border: 2.5px solid var(--marrom); border-radius: var(--raio-g); padding: 18px 20px 20px; box-shadow: inset 0 0 0 3px rgba(215, 164, 91, .38), var(--sombra); min-width: 0; }
+.lab-card > h3 { color: var(--tinta); font-size: 1.5rem; margin-bottom: 4px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.lab-card > .sub { font-size: .96rem; color: var(--tinta-suave); margin-bottom: 12px; }
+
+.exemplos { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.exemplos button[aria-pressed="true"] { background: var(--vinho); color: var(--creme); border-color: var(--vinho); }
+.soltar { display: grid; place-items: center; text-align: center; gap: 4px; padding: 16px; border: 2.5px dashed var(--ouro-escuro); border-radius: 14px; background: rgba(215, 164, 91, .12); cursor: pointer; min-height: 92px; transition: background .15s, border-color .15s; }
+.soltar:hover, .soltar.sobre { background: rgba(215, 164, 91, .3); border-color: var(--vinho); }
+.soltar input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.soltar:focus-within { outline: 3px solid var(--vinho); outline-offset: 3px; }
+.soltar b { font-size: 1.05rem; }
+.soltar small { color: var(--tinta-suave); font-weight: 700; }
+.campo-json { width: 100%; min-height: 150px; resize: vertical; margin-top: 12px; padding: 10px 12px; background: #3A2630; color: #F6E7CC; border: 2px solid #20131C; border-radius: 10px; font-family: var(--f-mono); font-size: .84rem; line-height: 1.55; tab-size: 2; }
+.campo-json:focus-visible { outline-color: var(--vinho); }
+.linha-acoes { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 10px; }
+
+.validacao { margin-top: 12px; display: grid; gap: 6px; }
+.validacao .msg { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 8px; padding: 8px 12px; border-radius: 10px; font-size: .95rem; line-height: 1.45; border: 1.5px solid transparent; }
+.validacao .msg::before { font-weight: 800; text-align: center; }
+.validacao .ok { background: #DCEBCB; border-color: #9DB886; color: #2F4A25; } .validacao .ok::before { content: "✓"; }
+.validacao .erro { background: #F4D6D2; border-color: #D79C96; color: #6E2A26; } .validacao .erro::before { content: "!"; }
+.validacao .aviso { background: #F6E5B8; border-color: #D9BC74; color: #6A4A12; } .validacao .aviso::before { content: "i"; }
+
+.abas-lab { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 12px; padding: 4px; background: #E3CFA6; border-radius: 12px; border: 1.5px solid var(--linha-papel); }
+.abas-lab button { flex: 1 1 auto; min-height: 40px; border: 0; background: transparent; border-radius: 9px; padding: 6px 12px; font-weight: 800; color: var(--tinta-suave); }
+.abas-lab button[aria-selected="true"] { background: var(--vinho); color: var(--creme); }
+.abas-lab button:disabled { opacity: .45; }
+
+.resumo-caso { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; margin-bottom: 12px; }
+.resumo-caso div { background: rgba(255, 249, 235, .7); border: 1.5px solid var(--linha-papel); border-radius: 10px; padding: 8px 10px; }
+.resumo-caso b { display: block; font-family: var(--f-titulo); font-size: 1.55rem; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.resumo-caso span { font-size: .84rem; font-weight: 700; color: var(--tinta-suave); }
+
+/* linha do tempo (dados reais do caso, sem inferência) */
+.linha-tempo { overflow-x: auto; border: 1.5px solid var(--linha-papel); border-radius: 10px; background: rgba(255, 249, 235, .6); padding: 8px; }
+.linha-tempo svg { display: block; min-width: 560px; width: 100%; height: auto; }
+.linha-tempo .eixo { stroke: var(--marrom); stroke-width: 1.5; }
+.linha-tempo .grade { stroke: rgba(105, 69, 47, .18); stroke-width: 1; }
+.linha-tempo text { font-family: var(--f-texto); fill: var(--tinta); }
+.linha-tempo .t-eixo { font-size: 11px; font-weight: 700; fill: var(--tinta-suave); font-variant-numeric: tabular-nums; }
+.linha-tempo .t-pessoa { font-size: 13px; font-weight: 800; }
+.linha-tempo .t-ponto { font-size: 11px; font-weight: 800; }
+.linha-tempo .janela { fill: rgba(113, 63, 82, .16); stroke: var(--vinho); stroke-dasharray: 5 4; stroke-width: 1.5; }
+.legenda-salas { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 8px; font-size: .88rem; font-weight: 700; }
+.legenda-salas span { display: inline-flex; align-items: center; gap: 6px; }
+.legenda-salas i { width: 12px; height: 12px; border-radius: 50%; display: inline-block; border: 1.5px solid rgba(0, 0, 0, .35); }
+.legenda-salas .barra { width: 22px; height: 8px; border-radius: 3px; }
+
+/* pergunta e resultado */
+.lab-card select { width: 100%; min-height: 46px; border-radius: 10px; border: 2px solid var(--marrom); background: #FBF1DA; color: var(--tinta); font-weight: 700; font-size: 1rem; padding: 8px 12px; }
+.lab-card label { font-weight: 800; font-size: .92rem; display: block; margin: 10px 0 4px; }
+.resultado { margin-top: 14px; border: 2px dashed var(--ouro-escuro); border-radius: 12px; padding: 14px; background: rgba(215, 164, 91, .14); display: grid; gap: 10px; }
+.resultado.pronto { border-style: solid; background: rgba(255, 249, 235, .7); }
+.resultado h4 { font-family: var(--f-texto); font-size: .92rem; color: var(--vinho); }
+.estado-motor { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-weight: 800; }
+.estado-motor .luz { width: 12px; height: 12px; border-radius: 50%; background: #B7A48C; border: 2px solid var(--marrom); }
+
+@media (max-width: 960px) {
+  .lab-grade { grid-template-columns: minmax(0, 1fr); }
+}
+
+.lab-card label.soltar { display: grid; margin: 0; font-size: 1rem; position: relative; }
+.estado-motor .luz.ligada { background: #5E9A4B; border-color: #2F5A2A; }

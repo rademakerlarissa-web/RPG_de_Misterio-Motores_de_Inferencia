@@ -1,0 +1,54 @@
+{
+ "corredores": [
+  [
+   "hall",
+   "galeria",
+   2
+  ],
+  [
+   "galeria",
+   "reserva",
+   4
+  ],
+  [
+   "reserva",
+   "cafe",
+   3
+  ]
+ ],
+ "local_do_crime": "hall",
+ "janela": [
+  10,
+  20
+ ],
+ "registros": [
+  [
+   "guarda",
+   "cafe",
+   0
+  ],
+  [
+   "guarda",
+   "cafe",
+   40
+  ],
+  [
+   "curadora",
+   "reserva",
+   5
+  ],
+  [
+   "curadora",
+   "reserva",
+   30
+  ]
+ ],
+ "depoimentos": [
+  [
+   "guarda",
+   "cafe",
+   0,
+   40
+  ]
+ ]
+}
